@@ -1,5 +1,6 @@
 import React from 'react'
-import bike from './assets/Bike.png'
+import bike from './assets/bike.png'
+import chain  from './assets/chain.png'
 
 export default function App() {
 
@@ -195,7 +196,9 @@ export default function App() {
                 <h1 onClick={handleOnClick} className="nav--about">ABOUT</h1>
             </nav>
             <section>
-                <div onClick={handleOnClick} className={`main--about ${toggle}`}> Bike Parts is a resource designed to teach the parts of a bicycle. It is free to use and available for anyone. The aim of this resource is to help lower the barrier to entry in bicycle mechanics especially for folks who have historically been excluded; people of colour, women, queer, trans, and gender non-conforming folks.</div>
+                <img className='main--chain' src={chain}/>
+                <div onClick={handleOnClick} className={`main--about ${toggle}`}> Bike Parts is a resource designed to teach the parts of a bicycle. It is free to use and available for anyone. The aim of this resource is to help lower the barrier to entry in bicycle mechanics especially for folks who have historically been excluded; people of colour, women, queer, trans, and gender non-conforming folks.<br></br><br></br><a href="mailto:hello@alextownson.ca">hello@alextownson.ca</a></div>
+                <div className='main--mobile-app'>Mobile app coming soon!<br></br><br></br>Bike Parts is a resource designed to teach the parts of a bicycle. It is free to use and available for anyone. The aim of this resource is to help lower the barrier to entry in bicycle mechanics especially for folks who have historically been excluded; people of colour, women, queer, trans, and gender non-conforming folks.<br></br><br></br><a href="mailto:hello@alextownson.ca">hello@alextownson.ca</a></div>
                 <img src={bike} className="main--bike" />
                 <div className='main--grid'>
                     {boxes}

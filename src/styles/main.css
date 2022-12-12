@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
     color:#222;
+    overflow: hidden;
 }
 
 nav {
@@ -30,6 +31,15 @@ h1 {
 
 .nav--about:hover {
     text-decoration: underline;
+}
+
+.main--chain {
+    pointer-events: none;
+    position: absolute;
+    top:60px;
+    left:0;
+    width: 20vw;
+    z-index: 2;
 }
 
 .main--bike {
@@ -76,10 +86,65 @@ h1 {
     font-size: 28pt;
 }
 
+.main--mobile-app {
+    display: none;
+}
+
 .hide {
     display: none;
 }
 
 .show {
     display: show;
+}
+
+
+a:hover {
+    color: #DA91FF;
+}
+
+
+/* SMALL COMPUTERS/TABLETS */
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    .main--about {
+        font-size: 20pt;
+    }
+
+}
+
+
+/* PHONES */
+
+@media screen and (max-width: 767px) {
+
+    .nav--about {
+        text-decoration: underline;
+    }
+
+    .nav--about {
+        cursor: default;
+    }
+
+    .main--mobile-app {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background-color: white;
+        opacity: 0.9;
+        padding: 13vh 10vw;
+        font-size: 14pt;
+    }    
+
+    .main--about {
+        display: none;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
 }
